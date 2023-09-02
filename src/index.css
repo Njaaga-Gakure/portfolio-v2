@@ -309,6 +309,7 @@ hr {
 .title-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
   align-items: center;
   margin-bottom: 2rem;
 }
