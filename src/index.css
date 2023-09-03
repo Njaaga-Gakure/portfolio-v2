@@ -3,7 +3,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 5rem;
+  scroll-padding: 4.5rem;
   font-size: 100%;
 }
 :root {
@@ -154,6 +154,21 @@ hr {
 .full-page {
   min-height: 100vh;
 }
+/* ------ title ------- */
+
+.title {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.title__text {
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  color: var(--primary-700);
+}
 
 /* ------- Navbar ------- */
 
@@ -266,9 +281,7 @@ hr {
 /* ------- skills ------- */
 .skills-container {
   min-height: 100vh;
-}
-.skills--center {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .skills__heading {
   letter-spacing: var(--letter-spacing-2);
@@ -305,18 +318,6 @@ hr {
 .portfolio {
   min-height: 100vh;
   text-align: center;
-}
-.title-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.title {
-  letter-spacing: 3px;
-  text-transform: capitalize;
-  color: var(--primary-700);
 }
 .portfolio--center {
   display: grid;
@@ -364,7 +365,7 @@ hr {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 .project__link {
   width: 40px;
@@ -407,7 +408,7 @@ hr {
   background-color: var(--primary-400);
 }
 .page-btn--active {
-  background-color: var(--primary-800);
+  background-color: var(--primary-900);
 }
 .prev-btn,
 .next-btn {
@@ -419,6 +420,11 @@ hr {
   color: var(--primary-500);
   font-size: 1.15rem;
   cursor: pointer;
+}
+
+/* ------ contact -------- */
+.contact {
+  min-height: 100vh;
 }
 /* ------- footer ------- */
 .footer {

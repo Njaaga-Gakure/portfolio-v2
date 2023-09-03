@@ -2,7 +2,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { MdDarkMode } from "react-icons/md";
 import { BsLightbulb } from "react-icons/bs";
 
-const Navbar = ({ scroll }) => {
+const Navbar = ({ scroll, handleDark, handleLight, isDarkMode }) => {
   return (
     <nav className={scroll > 0 ? "nav nav--sticky" : "nav"}>
       <div className="nav--center center-container">
@@ -27,10 +27,24 @@ const Navbar = ({ scroll }) => {
           <AiOutlineMenu />
         </button>
         <div className="toggle-dark">
-          <button className="toggle-dark__btn">
-            <BsLightbulb />{" "}
+          <button
+            onClick={handleLight}
+            className={
+              !isDarkMode
+                ? "toggle-dark__btn toggle-dark--active"
+                : "toggle-dark__btn"
+            }
+          >
+            <BsLightbulb />
           </button>
-          <button className="toggle-dark__btn toggle-dark--active">
+          <button
+            onClick={handleDark}
+            className={
+              isDarkMode
+                ? "toggle-dark__btn toggle-dark--active"
+                : "toggle-dark__btn"
+            }
+          >
             <MdDarkMode />
           </button>
         </div>

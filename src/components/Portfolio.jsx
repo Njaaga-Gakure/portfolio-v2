@@ -1,5 +1,7 @@
 import Project from "./Project";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import Title from "./Title";
+
 const Portfolio = ({
   projects,
   data,
@@ -11,11 +13,7 @@ const Portfolio = ({
   return (
     <section className="portfolio" id="portfolio">
       <div>
-        <div className="center-container title-container">
-          <hr />
-          <h3 className="title">portfolio</h3>
-          <hr />
-        </div>
+        <Title name="portfolio" />
         <div className="center-container portfolio--center">
           {projects.map((project) => {
             return <Project key={project.id} {...project} />;

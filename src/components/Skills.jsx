@@ -3,10 +3,12 @@ import {
   skillsUsingData as usingSkills,
   skillsLearningData as learningSkills,
 } from "../utils";
+import Title from "./Title";
 
 const Skills = () => {
   return (
     <section id="skills" className="skills-container">
+      <Title name="skills" />
       <div className="center-container skills--center">
         <div className="skills">
           <span className="skills__title">skills using :</span>
