@@ -195,7 +195,7 @@ hr {
 .logo__text {
   margin: 0;
   letter-spacing: var(--letter-spacing-2);
-  color: var(--primary-300);
+  color: var(--primary-200);
   text-transform: capitalize;
 }
 .nav--sticky .logo__text {
@@ -208,7 +208,7 @@ hr {
   background-color: transparent;
   border-color: transparent;
   font-size: 1.5rem;
-  color: var(--primary-300);
+  color: var(--primary-200);
   cursor: pointer;
   transition: var(--transition);
 }
@@ -240,7 +240,7 @@ hr {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("/hero_bg.jpg");
+  background-image: url("/hero_bg_light.jpg");
   background-size: cover;
   background-position: left;
   z-index: -1;
@@ -250,7 +250,7 @@ hr {
   letter-spacing: var(--letter-spacing-2);
 }
 .hero__tagline span {
-  color: var(--primary-300);
+  color: var(--primary-200);
 }
 .hero__text {
   letter-spacing: var(--letter-spacing-2);
@@ -470,14 +470,14 @@ hr {
   .nav__link {
     letter-spacing: var(--letter-spacing-2);
     text-transform: capitalize;
-    color: var(--primary-300);
+    color: var(--primary-200);
     transition: var(--transition);
   }
   .nav--sticky .nav__link {
     color: var(--dark-green);
   }
   .nav__link:hover {
-    color: var(--primary-400);
+    color: var(--primary-300);
   }
   .toggle-dark {
     display: flex;

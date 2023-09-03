@@ -8,7 +8,12 @@ const Project = ({ image, title, url }) => {
         <h5 className="project__title">{title}</h5>
         <hr />
         <div className="project__links">
-          <a href={url} className="project__link">
+          <a
+            href={url}
+            target="_blank"
+            rel="noreferrer"
+            className="project__link"
+          >
             <MdRocketLaunch />
           </a>
           <a
