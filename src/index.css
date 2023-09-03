@@ -36,6 +36,7 @@ html {
 
   /* other colors */
   --dark-green: #003b36;
+  --active: #003d5b;
 
   /* shadows */
   --shadow-1: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -408,7 +409,7 @@ hr {
   background-color: var(--primary-400);
 }
 .page-btn--active {
-  background-color: var(--primary-900);
+  background-color: var(--active);
 }
 .prev-btn,
 .next-btn {
