@@ -1,15 +1,11 @@
 import Project from "./Project";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import Title from "./Title";
+import { useAppContext } from "../context/AppProvider";
 
-const Portfolio = ({
-  projects,
-  data,
-  handlePageChange,
-  page,
-  handlePrev,
-  handleNext,
-}) => {
+const Portfolio = () => {
+  const { projects, data, handlePageChange, page, handlePrev, handleNext } =
+    useAppContext();
   return (
     <section className="portfolio" id="portfolio">
       <div>

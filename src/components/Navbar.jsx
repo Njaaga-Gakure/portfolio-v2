@@ -1,8 +1,10 @@
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdDarkMode } from "react-icons/md";
 import { BsLightbulb } from "react-icons/bs";
+import { useAppContext } from "../context/AppProvider";
 
-const Navbar = ({ scroll, handleDark, handleLight, isDarkMode }) => {
+const Navbar = () => {
+  const { scroll, handleDark, handleLight, isDarkMode } = useAppContext();
   return (
     <nav className={scroll > 0 ? "nav nav--sticky" : "nav"}>
       <div className="nav--center center-container">
