@@ -16,13 +16,28 @@ const Hero = () => {
           Let's connect!
         </p>
         <div className="hero__links">
-          <a href="#" className="hero__link">
+          <a
+            href="https://github.com/Njaaga-Gakure"
+            target="_blank"
+            rel="noreferrer"
+            className="hero__link"
+          >
             <AiFillGithub />
           </a>
-          <a href="#" className="hero__link">
+          <a
+            href="https://www.linkedin.com/in/brian-gakure-0a2320188/"
+            target="_blank"
+            rel="noreferrer"
+            className="hero__link"
+          >
             <FaLinkedinIn />
           </a>
-          <a href="#" className="hero__link">
+          <a
+            href="https://twitter.com/njaagagakure"
+            target="_blank"
+            rel="noreferrer"
+            className="hero__link"
+          >
             <AiOutlineTwitter />
           </a>
         </div>

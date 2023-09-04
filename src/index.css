@@ -135,16 +135,16 @@ hr {
 .btn:hover {
   background: var(--primary-800);
 }
-.btn-secondary {
+.btn--secondary {
   border: 1px solid var(--primary-700);
   background: transparent;
   color: var(--primary-700);
 }
-.btn-secondary:hover {
+.btn--secondary:hover {
   background: var(--primary-700);
   color: white;
 }
-.btn-block {
+.btn--block {
   width: 100%;
 }
 .center-container {
@@ -427,6 +427,71 @@ hr {
 .contact {
   min-height: 100vh;
 }
+.form__center {
+  display: grid;
+  gap: 2rem;
+}
+.form__row {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  /* border: 1px solid black; */
+}
+.form__textarea {
+  height: 70px;
+}
+.form__input,
+.textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  letter-spacing: var(--letter-spacing-2);
+  border-color: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+.form__label {
+  position: absolute;
+  bottom: 10px;
+  pointer-events: none;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--gray-700);
+  transition: var(--transition);
+}
+.form__textarea .form__label {
+  bottom: 40px;
+}
+.form__input:focus ~ .form__label,
+.textarea:focus ~ .form__label,
+.form__input:valid ~ .form__label,
+.textarea:valid ~ .form__label {
+  transform: translateY(-25px);
+  font-size: 0.8rem;
+  color: var(--primary-400);
+}
+.form__underline {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: var(--primary-500);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: var(--transition);
+}
+.form__input:focus ~ .form__underline,
+.textarea:focus ~ .form__underline,
+.form__input:valid ~ .form__underline,
+.textarea:valid ~ .form__underline {
+  transform: scale(1);
+}
+.btn-container .btn {
+  width: 100%;
+}
 /* ------- footer ------- */
 .footer {
   text-align: center;
@@ -457,6 +522,19 @@ hr {
   }
   .project:not(:nth-child(odd)) {
     margin-left: -30px;
+  }
+  .form__center {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .btn-container {
+    grid-row: 4;
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+  }
+  .btn-container .btn {
+    width: auto;
   }
 }
 @media (min-width: 800px) {
