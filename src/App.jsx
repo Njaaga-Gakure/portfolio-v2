@@ -1,8 +1,17 @@
-import { Hero, Navbar, Skills, Portfolio, Footer, Contact } from "./components";
+import {
+  Hero,
+  Navbar,
+  Skills,
+  Portfolio,
+  Footer,
+  Contact,
+  Sidebar,
+} from "./components";
 
 const App = () => {
   return (
     <div>
+      <Sidebar />
       <Navbar />
       <Hero />
       <Skills />

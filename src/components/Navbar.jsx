@@ -1,10 +1,10 @@
-import { AiOutlineMenu } from "react-icons/ai";
-import { MdDarkMode } from "react-icons/md";
-import { BsLightbulb } from "react-icons/bs";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { useAppContext } from "../context/AppProvider";
+import { links } from "../utils";
+import DarkModeToggler from "./DarkModeToggler";
 
 const Navbar = () => {
-  const { scroll, handleDark, handleLight, isDarkMode } = useAppContext();
+  const { scroll, toggleSidebar, isSidebarOpen } = useAppContext();
   return (
     <nav className={scroll > 0 ? "nav nav--sticky" : "nav"}>
       <div className="nav--center center-container">
@@ -12,44 +12,18 @@ const Navbar = () => {
           <h3 className="logo__text">Gakure</h3>
         </div>
         <ul className="nav__links">
-          <li className="nav__link">
-            <a href="#home">home</a>
-          </li>
-          <li className="nav__link">
-            <a href="#skills">skills</a>
-          </li>
-          <li className="nav__link">
-            <a href="#portfolio">portfolio</a>
-          </li>
-          <li className="nav__link">
-            <a href="#contact">contact me</a>
-          </li>
+          {links.map(({ id, link }) => {
+            return (
+              <li key={id} className="nav__link">
+                <a href={`#${link}`}>{link}</a>
+              </li>
+            );
+          })}
         </ul>
-        <button className="btn--toggle">
-          <AiOutlineMenu />
+        <button onClick={toggleSidebar} className="btn--toggle">
+          {isSidebarOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
         </button>
-        <div className="toggle-dark">
-          <button
-            onClick={handleLight}
-            className={
-              !isDarkMode
-                ? "toggle-dark__btn toggle-dark--active"
-                : "toggle-dark__btn"
-            }
-          >
-            <BsLightbulb />
-          </button>
-          <button
-            onClick={handleDark}
-            className={
-              isDarkMode
-                ? "toggle-dark__btn toggle-dark--active"
-                : "toggle-dark__btn"
-            }
-          >
-            <MdDarkMode />
-          </button>
-        </div>
+        <DarkModeToggler />
       </div>
     </nav>
   );

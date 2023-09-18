@@ -8,6 +8,7 @@ import {
   SET_PREV_PAGE,
   SET_NEXT_PAGE,
   SET_PROJECTS,
+  TOGGLE_SIDEBAR,
 } from "../actions";
 import { paginate } from "../paginate";
 import { projects as projectsData } from "../utils";
@@ -27,6 +28,10 @@ export const AppProvider = ({ children }) => {
 
   const handleScroll = () => {
     dispatch({ type: SET_SCROLL, payload: window.scrollY });
+  };
+
+  const toggleSidebar = () => {
+    dispatch({ type: TOGGLE_SIDEBAR });
   };
   const handleDark = () => {
     dispatch({ type: SET_DARK });
@@ -56,6 +61,7 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         ...state,
+        toggleSidebar,
         handleDark,
         handleLight,
         handlePageChange,

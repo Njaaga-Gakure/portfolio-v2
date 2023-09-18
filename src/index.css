@@ -222,10 +222,85 @@ hr {
 .nav--sticky .btn--toggle {
   color: var(--dark-green);
 }
-.toggle-dark {
+.toggle-dark-container {
   display: none;
 }
-
+.toggle-dark {
+  display: flex;
+  border-radius: var(--border-radius-2);
+  border: 1px solid var(--primary-600);
+  background: var(--gray-50);
+}
+.toggle-dark__btn {
+  background-color: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: var(--primary-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.toggle-dark--active {
+  background-color: var(--primary-500);
+  color: var(--gray-50);
+}
+/* ---------- Sidebar --------- */
+.sidebar {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--gray-50);
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: var(--transition);
+  padding: 1rem 2rem;
+}
+.sidebar--open {
+  transform: translateX(0);
+}
+.sidebar .logo__text {
+  text-align: center;
+  color: var(--dark-green);
+}
+.sidebar__link {
+  position: relative;
+  display: block;
+  letter-spacing: var(--letter-spacing-2);
+  color: var(--gray-600);
+  text-transform: capitalize;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+.sidebar__link a {
+  display: block;
+}
+.sidebar__link:hover {
+  color: var(--primary-500);
+  margin-left: 0.5rem;
+}
+.link__underline {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primary-500);
+  transform: scale(0);
+  transform-origin: left;
+  transition: 0.8s;
+}
+.sidebar__link:hover > .link__underline {
+  transform: scale(1);
+}
+.sidebar > .toggle-dark-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
 /* -------- Hero -------- */
 
 .hero {
@@ -477,7 +552,6 @@ hr {
 .form__underline {
   position: absolute;
   bottom: 0;
-  content: "";
   height: 1px;
   width: 100%;
   background-color: var(--primary-500);
@@ -554,6 +628,9 @@ hr {
   background-color: var(--primary-500);
 }
 @media (min-width: 574px) {
+  .sidebar {
+    width: 50%;
+  }
   .portfolio--center {
     grid-template-columns: repeat(2, 250px);
     row-gap: 2rem;
@@ -608,29 +685,11 @@ hr {
   .nav__link:hover {
     color: var(--primary-300);
   }
-  .toggle-dark {
-    display: flex;
-
-    border-radius: var(--border-radius-2);
-    border: 1px solid var(--primary-600);
-    background: var(--gray-50);
+  .toggle-dark-container {
+    display: block;
   }
-  .toggle-dark__btn {
-    background-color: transparent;
-    border-color: transparent;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1rem;
-    color: var(--primary-500);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: var(--transition);
-  }
-  .toggle-dark--active {
-    background-color: var(--primary-500);
-    color: var(--gray-50);
+  .sidebar {
+    display: none;
   }
   /* ------- skills ------ */
   .skill__icon {

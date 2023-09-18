@@ -1,4 +1,5 @@
 export const SET_SCROLL = "SET_SCROLL";
+export const TOGGLE_SIDEBAR = "TOGGLE_SIDEBAR";
 export const SET_DARK = "SET_DARK";
 export const SET_LIGHT = "SET_LIGHT";
 export const CHANGE_PAGE = "CHANGE_PAGE";

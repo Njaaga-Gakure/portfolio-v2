@@ -123,4 +123,12 @@ const projects = [
   },
 ];
 
-export { skillsUsingData, skillsLearningData, projects };
+// ---------- nav and sidebar links --------------------
+
+const links = [
+  { id: nanoid(), link: "home" },
+  { id: nanoid(), link: "skills" },
+  { id: nanoid(), link: "portfolio" },
+  { id: nanoid(), link: "contact" },
+];
+export { skillsUsingData, skillsLearningData, projects, links };

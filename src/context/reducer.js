@@ -6,6 +6,7 @@ import {
   SET_PREV_PAGE,
   SET_NEXT_PAGE,
   SET_PROJECTS,
+  TOGGLE_SIDEBAR,
 } from "../actions";
 
 const reducer = (state, action) => {
@@ -34,6 +35,9 @@ const reducer = (state, action) => {
   if (action.type === SET_PROJECTS) {
     const data = action.payload;
     return { ...state, projects: data[state.page] };
+  }
+  if (action.type === TOGGLE_SIDEBAR) {
+    return { ...state, isSidebarOpen: !state.isSidebarOpen };
   }
   throw new Error(`no type matching ${action.type}`);
 };
