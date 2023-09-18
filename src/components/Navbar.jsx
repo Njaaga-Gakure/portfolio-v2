@@ -22,7 +22,7 @@ const Navbar = () => {
             <a href="#portfolio">portfolio</a>
           </li>
           <li className="nav__link">
-            <a href="#contact">contact</a>
+            <a href="#contact">contact me</a>
           </li>
         </ul>
         <button className="btn--toggle">

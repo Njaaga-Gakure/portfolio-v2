@@ -1,9 +1,11 @@
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { useAppContext } from "../context/AppProvider";
 
 const Hero = () => {
+  const { isDarkMode } = useAppContext();
   return (
-    <section id="home" className="hero">
+    <section id="home" className={isDarkMode ? "hero hero--dark" : "hero"}>
       <div className="center-container hero--center">
         <h2 className="hero__tagline">
           Hi, I'm

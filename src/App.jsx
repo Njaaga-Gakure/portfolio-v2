@@ -2,7 +2,7 @@ import { Hero, Navbar, Skills, Portfolio, Footer, Contact } from "./components";
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div>
       <Navbar />
       <Hero />
       <Skills />

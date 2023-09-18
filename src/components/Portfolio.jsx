@@ -4,10 +4,20 @@ import Title from "./Title";
 import { useAppContext } from "../context/AppProvider";
 
 const Portfolio = () => {
-  const { projects, data, handlePageChange, page, handlePrev, handleNext } =
-    useAppContext();
+  const {
+    projects,
+    data,
+    handlePageChange,
+    page,
+    handlePrev,
+    handleNext,
+    isDarkMode,
+  } = useAppContext();
   return (
-    <section className="portfolio" id="portfolio">
+    <section
+      className={isDarkMode ? "portfolio bg--dark" : "portfolio"}
+      id="portfolio"
+    >
       <div>
         <Title name="portfolio" />
         <div className="center-container portfolio--center">
